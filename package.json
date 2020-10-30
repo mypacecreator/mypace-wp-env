@@ -1,0 +1,15 @@
+{
+  "name": "mypace-wp-env",
+  "version": "1.0.0",
+  "description": "my WordPress local environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "env": "wp-env"
+  },
+  "author": "Kei Nomura",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/env": "^2.1.0"
+  }
+}
