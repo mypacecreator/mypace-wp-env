@@ -6,15 +6,12 @@
     "https://downloads.wordpress.org/plugin/wonderm00ns-simple-facebook-open-graph-tags.zip",
     "https://downloads.wordpress.org/plugin/breadcrumb-navxt.zip",
     "https://downloads.wordpress.org/plugin/show-current-template.zip",
-    "https://downloads.wordpress.org/plugin/simple-post-type-permalinks.zip",
+    "https://downloads.wordpress.org/plugin/custom-post-type-permalinks.zip",
     "https://downloads.wordpress.org/plugin/smart-custom-fields.zip",
-    "https://downloads.wordpress.org/plugin/snow-monkey-blocks.zip",
-    "https://downloads.wordpress.org/plugin/wp-multibyte-patch.zip",
-    "./cms/wp-content/plugins/my-snow-monkey",
-    "./cms/wp-content/plugins/daiwatech-feature-block"
+    "https://downloads.wordpress.org/plugin/wp-multibyte-patch.zip"
   ],
   "themes": [
-    "./cms/wp-content/themes/snow-monkey"
+    "./cms/wp-content/themes/blank_theme"
   ],
   "port": 4444,
   "testsPort": 4449

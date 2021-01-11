@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "env": "wp-env"
+    "env": "wp-env",
+    "wp": "wp-env run cli wp",
+    "build:plugin": "wp-scripts build ./cms/wp-content/mu-plugins/src/index.js --output-path=./cms/wp-content/mu-plugins/build"
   },
   "author": "Kei Nomura",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/env": "^2.1.0"
+    "@wordpress/env": "^2.1.0",
+    "@wordpress/scripts": "^12.4.0"
   }
 }
