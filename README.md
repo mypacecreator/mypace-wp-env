@@ -37,6 +37,13 @@ $ npm run watch // 監視
 $ npm run compile:css // 本番用コンパイル
 ```
 
+## コード検証（stylelint, ESLint）
 
+```
+$ npm run lint:scss // SCSS
+$ npm run lint:js // JS
+```
+
+参考 [stylelint](https://stylelint.io/) ,  [ESLint](https://eslint.org/) 
 
 
