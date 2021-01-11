@@ -28,6 +28,15 @@ $ npm run wp コマンド // 短縮形を登録しているのでこの形でも
 
 参考 [WP-CLI Commands公式ドキュメントページ](https://developer.wordpress.org/cli/commands/) 
 
+## Sassを使う
+
+[node-sass](https://www.npmjs.com/package/node-sass) を使用。
+
+```
+$ npm run watch // 監視
+$ npm run compile:css // 本番用コンパイル
+```
+
 
 
 
