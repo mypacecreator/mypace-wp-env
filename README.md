@@ -22,8 +22,13 @@ $ open "http://localhost:4444/wp-admin"
 ## WP-CLIを使う
 
 ```
-$ npm wp-env run cli wp コマンド // 本来のコマンド
-$ npm run wp コマンド // 短縮形を登録しているのでこの形でも動く。
+$ npm run env run cli wp コマンド // 本来のコマンド
+$ npm run wp コマンド // packages.json 内で短縮形を登録しているのでこの形でも動く。
+```
+
+（例）WordPress コアのバージョンを確認するコマンド
+```
+$ npm run wp core version 
 ```
 
 参考 [WP-CLI Commands公式ドキュメントページ](https://developer.wordpress.org/cli/commands/) 
