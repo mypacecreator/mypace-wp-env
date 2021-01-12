@@ -14,10 +14,12 @@ $ npm i -D // wp-env, wp-scripts をインストール
 $ npm run env start // @wordpress/env 仮想環境の立ち上げ
 $ open "http://localhost:4444/wp-admin"
 ```
+使用するテーマ名、プラグインの指定やコアのバージョン指定、ポート番号の変更などは .wp-env.json を編集する。
 
-詳細は [@wordpress/env 公式ドキュメントページ](https://ja.wordpress.org/team/handbook/block-editor/packages/packages-env/) を参照。
+詳細は [@wordpress/env 公式ドキュメントページ](https://ja.wordpress.org/team/handbook/block-editor/packages/packages-env/) を参照のこと。
 
 環境が立ち上がったら、admin / password でログイン→管理画面の言語・タイムゾーン等を適宜変更する。
+
 
 ## WP-CLIを使う
 
