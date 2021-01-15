@@ -13,6 +13,7 @@
 $ npm i -D // wp-env, wp-scripts をインストール
 $ npm run env start // @wordpress/env 仮想環境の立ち上げ
 $ open "http://localhost:4444/wp-admin"
+$ npm run env stop // @wordpress/env 仮想環境の停止
 ```
 使用するテーマ名、プラグインの指定やコアのバージョン指定、ポート番号の変更などは .wp-env.json を編集する。
 
