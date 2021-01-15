@@ -40,9 +40,12 @@ $ npm run wp core version
 [node-sass](https://www.npmjs.com/package/node-sass) を使用。
 
 ```
-$ npm run watch // 監視
+$ npm run watch:scss // Scssのみ監視
+$ npm run watch // Scss監視＋ブラウザ自動リロード
 $ npm run compile:css // 本番用コンパイル
 ```
+
+設定は bs-config.js にて適宜変更して使用すること。
 
 ## コード検証（stylelint, ESLint）
 

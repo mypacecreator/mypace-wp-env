@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "env": "wp-env",
     "wp": "wp-env run cli wp",
+    "bs": "browser-sync start --config bs-config.js",
+    "watch": "npm run bs & npm run watch:scss",
     "build:plugin": "wp-scripts build ./cms/wp-content/mu-plugins/src/index.js --output-path=./cms/wp-content/mu-plugins/build",
-    "watch": "node-sass ./cms/wp-content/themes/blank_theme/sass/ -o ./cms/wp-content/themes/blank_theme/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "watch:scss": "node-sass ./cms/wp-content/themes/blank_theme/sass/ -o ./cms/wp-content/themes/blank_theme/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass ./cms/wp-content/themes/blank_theme/sass/ -o ./cms/wp-content/themes/blank_theme/",
     "lint:scss": "wp-scripts lint-style ./cms/wp-content/themes/blank_theme/sass/**/*.scss --fix",
     "lint:js": "wp-scripts lint-js ./cms/wp-content/themes/blank_theme/js/*.js --fix"
@@ -16,10 +18,12 @@
   "author": "Kei Nomura",
   "license": "ISC",
   "devDependencies": {
+    "@wordpress/browserslist-config": "^2.7.0",
     "@wordpress/env": "^2.1.0",
     "@wordpress/eslint-plugin": "^7.4.0",
     "@wordpress/prettier-config": "^0.4.0",
     "@wordpress/scripts": "^12.4.0",
+    "browser-sync": "^2.26.13",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1"
   },
