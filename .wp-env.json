@@ -1,5 +1,6 @@
 {
   "core": null,
+  "phpVersion": "7.4",
   "plugins": [
     "https://downloads.wordpress.org/plugin/disable-comments.zip",
     "https://downloads.wordpress.org/plugin/disable-author-archives.zip",
