@@ -18,12 +18,12 @@
   "author": "Kei Nomura",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/browserslist-config": "^2.7.0",
-    "@wordpress/env": "^2.1.0",
-    "@wordpress/eslint-plugin": "^7.4.0",
-    "@wordpress/prettier-config": "^0.4.0",
-    "@wordpress/scripts": "^12.4.0",
-    "browser-sync": "^2.26.13",
+    "@wordpress/browserslist-config": "^3.0.1",
+    "@wordpress/env": "^4.0.0",
+    "@wordpress/eslint-plugin": "^9.0.1",
+    "@wordpress/prettier-config": "^1.0.1",
+    "@wordpress/scripts": "^14.0.1",
+    "browser-sync": "^2.26.14",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1"
   },
