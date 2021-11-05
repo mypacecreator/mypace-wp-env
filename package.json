@@ -16,7 +16,8 @@
     "min:img": "node imagemin.js",
     "watch:img": "onchange './cms/wp-content/themes/blank_theme/img' -e '**/*.DS_Store' -- npm run min:img",
     "lint:sass": "wp-scripts lint-style ./cms/wp-content/themes/blank_theme/src/sass/**/*.scss --fix",
-    "lint:js": "wp-scripts lint-js ./cms/wp-content/themes/blank_theme/src/js/*.js --fix"
+    "lint:js": "wp-scripts lint-js ./cms/wp-content/themes/blank_theme/src/js/*.js --fix",
+    "min:js": "uglifyjs ./cms/wp-content/themes/blank_theme/src/js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js"
   },
   "author": "Kei Nomura",
   "license": "ISC",
@@ -42,7 +43,8 @@
     "postcss-cli": "^9.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "uglify-js": "^3.14.3"
   },
   "dependencies": {
     "rimraf": "^3.0.2"

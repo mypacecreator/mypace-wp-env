@@ -70,4 +70,14 @@ $ npm run lint:js // JS
 
 参考 [stylelint](https://stylelint.io/) ,  [ESLint](https://eslint.org/) 
 
+## JS圧縮（UglifyJS 3）
 
+```
+$ uglifyjs ./cms/wp-content/themes/blank_theme/src/js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js
+
+or
+
+$ npm run min:js
+```
+
+参考 [UglifyJS 3](https://www.npmjs.com/package/uglify-js)
