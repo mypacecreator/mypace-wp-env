@@ -8,11 +8,11 @@
     "env": "wp-env",
     "wp": "wp-env run cli wp",
     "bs": "browser-sync start --config bs-config.js",
-    "watch": "npm run bs & npm run watch:scss",
+    "watch": "npm run bs & npm run watch:sass",
     "build:plugin": "wp-scripts build ./cms/wp-content/mu-plugins/src/index.js --output-path=./cms/wp-content/mu-plugins/build",
-    "watch:scss": "node-sass ./cms/wp-content/themes/blank_theme/sass/ -o ./cms/wp-content/themes/blank_theme/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass ./cms/wp-content/themes/blank_theme/sass/ -o ./cms/wp-content/themes/blank_theme/",
-    "lint:scss": "wp-scripts lint-style ./cms/wp-content/themes/blank_theme/sass/**/*.scss --fix",
+    "compile:sass": "sass ./cms/wp-content/themes/blank_theme/sass/:./cms/wp-content/themes/blank_theme/ --style=expanded --charset --error-css --source-map-urls=relative",
+    "compile:postcss": "postcss ./cms/wp-content/themes/blank_theme/style.css --no-map -u postcss-preset-env -o ./cms/wp-content/themes/blank_theme/style.css",
+    "lint:sass": "wp-scripts lint-style ./cms/wp-content/themes/blank_theme/sass/**/*.scss --fix",
     "lint:js": "wp-scripts lint-js ./cms/wp-content/themes/blank_theme/js/*.js --fix"
   },
   "author": "Kei Nomura",
@@ -24,8 +24,25 @@
     "@wordpress/prettier-config": "^1.1.1",
     "@wordpress/scripts": "^19.0.0",
     "browser-sync": "^2.27.7",
-    "node-sass": "^6.0.1",
-    "prettier": "^2.4.1"
+    "cpx": "^1.5.0",
+    "fibers": "^5.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "mkdirp": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   },
   "prettier": "@wordpress/prettier-config"
 }
