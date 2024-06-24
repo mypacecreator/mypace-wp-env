@@ -1,6 +1,6 @@
 {
   "name": "mypace-wp-env",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "my WordPress local environment",
   "main": "index.js",
   "scripts": {
@@ -48,6 +48,10 @@
   },
   "dependencies": {
     "rimraf": "^3.0.2"
+  },
+  "volta": {
+    "node": "20.11.1",
+    "npm": "10.8.1"
   },
   "prettier": "@wordpress/prettier-config"
 }
