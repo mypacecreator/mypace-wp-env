@@ -1,4 +1,8 @@
 (function($) {
+
+  /*
+   * トグル処理
+   * */
     $.fn.clickToggle = function (attr1, attr2) {
         return this.each(function () {
             let status = false;
@@ -15,7 +19,7 @@
 
     $(function () {
         // 上へボタンをクリックしたらぬるっと上へ戻る
-        $('a[href^="#"]').not('.js-toggle').not('.is-style-icon-modal-outline > a').on('click', function () {
+        $('a[href^="#"]').not('.js-toggle').on('click', function () {
             // スクロールの速度
             var speed = 400; // ミリ秒
             // アンカーの値取得

@@ -12,9 +12,10 @@
     "rimraf:css": "npx rimraf ./cms/wp-content/themes/blank_theme/_src/scss/*.css",
     "build:css": "run-s sass postcss:dev rimraf:css",
     "build:cssmin": "run-s sass postcss:minify rimraf:css",
-    "min:js": "uglifyjs ./cms/wp-content/themes/blank_theme/assets/_js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js",
+    "min:js": "uglifyjs ./cms/wp-content/themes/blank_theme/_src/js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js",
     "watch:css": "nodemon -e scss --watch ./cms/wp-content/themes/blank_theme/_src/scss -x \"npm run build:css\"",
-    "watch": "run-p watch:css bs",
+    "watch:js": "nodemon -e js --watch ./cms/wp-content/themes/blank_theme/_src/js -x \"npm run min:js\"",
+    "watch": "run-p watch:css watch:js bs",
     "build": "run-s build:cssmin min:js"
   },
   "author": "Kei Nomura",
