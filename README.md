@@ -41,25 +41,23 @@ $ npm run wp core version
 [Dirt Sass](https://www.npmjs.com/package/sass) を使用。
 
 ```
-$ npm run watch // Scss監視＋ブラウザ自動リロード
+$ npm run watch // scss, js監視＋ブラウザ自動リロード
 ```
 
 Browsersync 設定は bs-config.js にて適宜変更して使用すること。
 
-納品用データコンパイル用に [postcss-preset-env](https://www.npmjs.com/package/postcss-preset-env) を併用。IE対応などが必要な際に。
+## JS圧縮（UglifyJS）
 
 ```
-$ npm run compile:postcss // 本番用コンパイル
-```
-
-## JS圧縮（UglifyJS 3）
-
-```
-$ uglifyjs ./cms/wp-content/themes/blank_theme/src/js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js
-
-or
-
 $ npm run min:js
 ```
 
-参考 [UglifyJS 3](https://www.npmjs.com/package/uglify-js)
+参考 [UglifyJS](https://www.npmjs.com/package/uglify-js)
+
+## 本番用コンパイル
+納品用データコンパイル用に [postcss](https://www.npmjs.com/package/postcss) を併用。autoprefixer, cssnano を使用。
+
+```
+$ npm run build // 本番用コンパイル
+```
+
