@@ -123,16 +123,4 @@
         window.location.href = $(this).find('a').attr('href');
     });
 
-    /*
-    * 要素の高さを自動で揃える
-    * */
-    const $target = $('.p-about-panel-related-links .wp-block-columns .wp-block-column .wp-block-image');
-    let maxHeight = 0;
-    $target.each(function () {
-        const targetHeight = $(this).height();
-        if (targetHeight > maxHeight) {
-            maxHeight = targetHeight;
-        }
-    });
-    $target.height(maxHeight);
 })(jQuery);
