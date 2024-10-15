@@ -1,36 +1,5 @@
 @use "../global";
 
-.l-article--seminar {
-	margin-bottom: 60px;
-
-	@include global.md {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		column-gap: 72px;
-
-		.l-article__content {
-			flex-basis: 50%;
-			position: sticky;
-			top: calc( global.$header_height_pc + 20px );
-		}
-		.l-article__form {
-			flex-basis: 50%;
-		}
-	}
-}
-
-.admin-bar {
-	.l-article--seminar {
-		.l-article__content {
-			top: calc( global.$header_height_pc + 62px );
-			@media screen and (max-width: 782px) {
-				top: calc( global.$header_height_pc + 76px );
-			}
-		}
-	}
-}
-
 .l-article__meta {
 	display: flex;
 	align-items: center;
@@ -65,3 +34,4 @@
 	font-weight: 400;
 	margin: 0;
 }
+

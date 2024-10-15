@@ -4,8 +4,8 @@
 .c-card {
 	position: relative;
 	background-color: var(--color-white);
-	box-shadow: 0 0 16px #C9C7D83D;
-	border: 1px solid #C9C7D83f;
+	box-shadow: 0 0 16px var(--color-shadow);
+	border: 1px solid var(--color-lightgray);
 	border-radius: 4px;
 	&:hover {
 		box-shadow: none;
@@ -76,28 +76,6 @@
 				img {
 					transform: scale(1.05);
 				}
-			}
-		}
-	}
-
-	&.c-card--case {
-		.c-card__link {
-			padding-top: 30px;
-		}
-
-		.c-card__title {
-			text-align: center;
-			margin-bottom: 20px;
-			@include global.sm {
-				min-height: calc(2em * 1.4);
-			}
-		}
-	}
-
-	&.c-card--seminar {
-		.c-card__excerpt {
-			@include global.md {
-				font-size: 19px;
 			}
 		}
 	}

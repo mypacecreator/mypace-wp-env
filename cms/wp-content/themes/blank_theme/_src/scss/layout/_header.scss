@@ -4,7 +4,7 @@
 	position: sticky;
 	top: 0;
 	background-color: var(--color-white);
-	box-shadow: 0 0 20px #9BA4AF26;
+	box-shadow: 0 0 20px var(--color-shadow);
 	height: global.$header_height_sp;
 	z-index: 3;
 	@include global.md {

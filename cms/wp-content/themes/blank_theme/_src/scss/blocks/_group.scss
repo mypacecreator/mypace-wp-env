@@ -30,28 +30,3 @@
 	padding: 24px;
 }
 
-.is-style-has-gradient-bg {
-	background: linear-gradient(130deg, #FFEDF4 0%, #F3DDFF 51%, #D9F8FF 100%) 0 0 no-repeat;
-	box-shadow: 0px -20px 30px #4646461A;
-}
-
-.is-style-has-gradient-bg-dark {
-	background: transparent linear-gradient(120deg, #2A2189 0%, #531C29 100%) 0 0 no-repeat;
-	box-shadow: 0px -20px 30px #4646461A;
-}
-
-.has-gradient1-gradient-background {
-	background: var(--color-gradient-title);
-}
-
-.has-gradient2-gradient-background {
-	background: var(--color-gradient-heading);
-}
-
-.has-gradient3-gradient-background {
-	background: var(--color-gradient-bg);
-}
-
-.has-gradient4-gradient-background {
-	background: var(--color-gradient-button);
-}
