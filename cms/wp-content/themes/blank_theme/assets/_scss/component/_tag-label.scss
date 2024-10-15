@@ -1,0 +1,20 @@
+//サイト共通SCSS
+@use "../global";
+
+.c-tag-label {
+	color: var(--color-accent);
+	border-radius: 24px;
+	border: 1px solid var(--color-accent);
+	background-color: var(--color-white);
+	font-weight: var(--font-weight-bold);
+	display: inline-block;
+	padding: 6px 16px;
+	white-space: nowrap;
+	a {
+		color: var(--color-accent);
+		text-decoration: none;
+		&:hover {
+			color: inherit;
+		}
+	}
+}

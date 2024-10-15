@@ -1,0 +1,6 @@
+//サイト共通SCSS
+@use "../global";
+
+.c-bg {
+	background: var(--color-gradient-bg);
+}

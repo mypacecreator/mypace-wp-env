@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/**
+* 編集画面用CSS
+*/
+@use "foundation";
+
+/* ==========================================================================
+  blocks
+========================================================================== */
+
+@use "project/front-page";
+@use "blocks/button";
+@use "blocks/dl";
+@use "blocks/group";
+@use "blocks/heading";
+@use "blocks/image";
+@use "blocks/list";
+@use "blocks/paragraph";
+
+// for gutenberg
+.editor-styles-wrapper {
+  &.block-editor-writing-flow {
+    padding-bottom: 60px;
+  }
+
+    // ↓ 編集画面でのみ効かせたいCSS
+  .wp-block-post-title {
+    margin-bottom: 1.2em;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: #fefefe;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1em;
+    li {
+      margin-left: 1.5em;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  .wp-block-group {
+    border: 1px dotted #ddd;
+  }
+
+    // ↑ 編集画面でのみ効かせたいCSS
+}

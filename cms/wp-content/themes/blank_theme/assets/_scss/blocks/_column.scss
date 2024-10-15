@@ -1,0 +1,17 @@
+//サイト共通SCSS
+@use "../global";
+
+.wp-block-columns {
+	&.is-layout-flex {
+		@include global.sm {
+			gap: 45px;
+		}
+	}
+
+	&.is-style-reverse {
+		@include global.under_sm {
+			flex-direction: column-reverse;
+		}
+	}
+}
+

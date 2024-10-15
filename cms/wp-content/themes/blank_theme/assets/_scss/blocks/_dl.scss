@@ -1,0 +1,13 @@
+//サイト共通SCSS
+@use "../global";
+
+.wp-block-simple-definition-list-blocks-list {
+	.wp-block-simple-definition-list-blocks-div {
+		display: flex;
+	}
+	.wp-block-simple-definition-list-blocks-term {
+		font-weight: var(--font-weight-bold);
+		flex-basis: 6.5rem;
+	}
+}
+

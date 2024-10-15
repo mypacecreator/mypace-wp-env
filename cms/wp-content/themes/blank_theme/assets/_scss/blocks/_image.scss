@@ -1,0 +1,24 @@
+//サイト共通SCSS
+@use "../global";
+
+.wp-block-image {
+	margin-bottom: 40px;
+
+	.wp-element-caption {
+		color: var(--color-text);
+		text-align: left;
+		font-size: 16px;
+	}
+}
+
+.is-style-photo-frame {
+	margin-right: 10px;
+	img {
+		box-shadow: 10px 10px 0 var(--color-lightblue);
+	}
+}
+
+.is-style-background-color-white {
+	background-color: var(--color-white);
+}
+

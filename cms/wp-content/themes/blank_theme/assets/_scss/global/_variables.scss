@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+:root {
+	--color-text: #2C2C2C;
+	--color-accent: #6F7AFF;
+	--color-background: #F5F5F5;
+	--color-link: #2E37A5;
+	--color-hover: #4D68FF;
+	--color-shadow: #2C2C2C;
+	--color-white: #FFFFFF;
+	--color-red: #BF008C;
+	--color-yellow: #EAC159;
+	--color-orange: #FF4D4D;
+	--color-pink: #FFEFEF;
+	--color-green: #009111;
+	--color-lightgreen: #EFFFF7;
+	--color-blue: #2E37A5;
+	--color-lightblue: #DBE2FF;
+	--color-gray: #BFBFBF;
+	--color-lightgray: #F5F5F5;
+	--color-darkgray: #444558;
+	--color-beige: #FFF0DD;
+	--color-brown: #834700;
+
+	--color-gradient-title: transparent linear-gradient(268deg, #2C2CAA 0%, #41323E 100%) 0% 0% no-repeat padding-box;
+	--color-gradient-bg: transparent linear-gradient(180deg, #F0F4FF 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+	--color-gradient-heading: transparent linear-gradient(95deg, #FFEDF4 0%, #F3DDFF 51%, #D9F8FF 100%) 0 0 no-repeat padding-box;
+	--color-gradient-button: transparent linear-gradient(98deg, #7E7EFF 0%, #4A97FF 100%) 0 0 no-repeat padding-box;
+	--color-gradient-button-hover: transparent linear-gradient(98deg, #FFFFFF 0%, #A8CDFF 100%) 0 0 no-repeat padding-box;
+
+
+	--font-base: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro","游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ";
+	--font-heading: "Hiragino Mincho Pro", "ヒラギノ明朝 Pro";
+
+	--font-weight-bold: 500;
+}
+
+$xs: 600px;
+$sm: 782px;
+$md: 1024px;
+$lg: 1280px;
+$xl: 1480px;
+
+$content_width: 1280px;
+$content_width_narrow: 980px;
+//$main_column_width: 1030px;
+//$sidecolumn_width: 180px;
+$max_container_width: 1280px;
+$outer_container_width: 1480px;
+
+$header_height_pc: 77px;
+$header_height_sp: 70px;
+
+$column_gap: 20px;
+$container_side_padding_pc: 20px;
+$container_side_padding_sp: 20px;

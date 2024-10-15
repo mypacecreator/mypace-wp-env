@@ -1,0 +1,24 @@
+//サイト共通SCSS
+@use "../global";
+@use "../foundation/typography" as *;
+
+.c-page-title {
+	text-align: center;
+	padding: 12px 20px;
+	color: var(--color-white);
+	background: var(--color-gradient-title);
+
+	.c-page-title__title {
+		@include global.under_sm {
+			font-size: clamp(24px, 6vw, 28px);
+		}
+		@include global.sm {
+			font-size: 40px;
+			padding: 32px 20px;
+		}
+	}
+	p {
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+}

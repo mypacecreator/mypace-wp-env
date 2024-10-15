@@ -1,0 +1,55 @@
+//サイト共通SCSS
+@use "../global";
+
+.wp-block-essential-blocks-table-of-contents {
+	.eb-parent-wrapper {
+		& > .eb-toc-container {
+			background-color: var(--color-lightgray);
+			padding: 24px;
+
+			& > .eb-toc-wrapper {
+				& > .eb-toc__list-wrap {
+					& > .eb-toc__list {
+						& > li {
+							& > a {
+								color: var(--color-text);
+								font-size: 20px;
+								font-weight: var(--font-weight-bold);
+								text-decoration: none;
+								&:hover {
+									color: var(--color-hover);
+								}
+							}
+							.eb-toc__list {
+								margin-top: 0;
+								background-color: transparent;
+								li {
+									a {
+										color: var(--color-link);
+										font-size: 16px;
+										text-decoration: underline;
+										&::before {
+											content: '';
+											display: inline-block;
+											background: url('../images/icon-arrow-gradient.svg') no-repeat;
+											width: 18px;
+											height: 16px;
+											margin-top: 6px;
+											margin-right: 4px;
+										}
+										&:hover {
+											color: var(--color-hover);
+										}
+									}
+								}
+							}
+							& + li {
+								margin-top: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

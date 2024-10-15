@@ -1,0 +1,15 @@
+@use "../global";
+
+.l-main {
+	padding-top: global.$header_height_sp;
+	padding-right: global.$container_side_padding_sp;
+	padding-left: global.$container_side_padding_sp;
+	@include global.sm {
+		padding-right: global.$container_side_padding_pc;
+		padding-left: global.$container_side_padding_pc;
+
+		padding-top: global.$header_height_pc;
+		max-width: global.$max_container_width;
+		margin-inline: auto;
+	}
+}

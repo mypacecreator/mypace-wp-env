@@ -1,0 +1,58 @@
+@use "../global";
+
+/* Alignment Classes ------------------------- */
+/* Full */
+.alignfull {
+	margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
+	width: 100vw;
+}
+
+/* Wide */
+.alignwide {
+	max-width: global.$content_width;
+	position: relative;
+	width: 100%;
+}
+
+.alignleft {
+	max-width: 100%;
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	max-width: 100%;
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-inline: auto;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img {
+		margin-inline: auto;
+		display: block;
+	}
+}
+
+/* Entry Media ------------------------------- */
+
+.alignfull > figcaption,
+.alignfull > .wp-caption-text {
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(100% - 20px * 2);
+}

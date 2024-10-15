@@ -1,0 +1,41 @@
+//サイト共通SCSS
+@use "../global";
+
+.c-category-label {
+	color: var(--color-red);
+	background-color: var(--color-pink);
+	font-weight: var(--font-weight-bold);
+	display: inline-block;
+	padding: 3px 8px;
+	a {
+		color: var(--color-red);
+		text-decoration: none;
+		&:hover {
+			color: inherit;
+		}
+	}
+
+	&.c-category-label--release {
+		background-color: var(--color-beige);
+		color: var(--color-brown);
+		a {
+			color: var(--color-brown);
+		}
+	}
+
+	&.c-category-label--media {
+		background-color: var(--color-lightgreen);
+		color: var(--color-green);
+		a {
+			color: var(--color-green);
+		}
+	}
+}
+
+.c-category-label--lg {
+	padding: 5px 20px;
+	a {
+		font-size: 19px;
+		font-weight: 700;
+	}
+}

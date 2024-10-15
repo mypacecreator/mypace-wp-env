@@ -41,7 +41,6 @@ $ npm run wp core version
 [Dirt Sass](https://www.npmjs.com/package/sass) を使用。
 
 ```
-$ npm run watch:sass // Scssのみ監視
 $ npm run watch // Scss監視＋ブラウザ自動リロード
 ```
 
@@ -52,23 +51,6 @@ Browsersync 設定は bs-config.js にて適宜変更して使用すること。
 ```
 $ npm run compile:postcss // 本番用コンパイル
 ```
-
-## 画像軽量化
-
-[imagemin](https://www.npmjs.com/package/imagemin) を使用。コンパイル設定は imagemin.js に記述。
-
-```
-$ npm run min:img // 画像コンパイル
-```
-
-## コード検証（stylelint, ESLint）
-
-```
-$ npm run lint:sass // SCSS
-$ npm run lint:js // JS
-```
-
-参考 [stylelint](https://stylelint.io/) ,  [ESLint](https://eslint.org/) 
 
 ## JS圧縮（UglifyJS 3）
 

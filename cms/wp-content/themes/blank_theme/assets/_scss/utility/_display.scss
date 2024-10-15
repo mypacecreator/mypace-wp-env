@@ -1,0 +1,45 @@
+@use "../global";
+
+.hide-over-xs {
+  @include global.xs {
+    display: none !important;
+  }
+}
+.hide-under-xs {
+  @include global.under_xs {
+     display: none !important;
+  }
+}
+
+.hide-over-sm {
+  @include global.sm {
+     display: none !important;
+  }
+}
+.hide-under-sm {
+  @include global.under_sm {
+     display: none !important;
+  }
+}
+
+.hide-over-md {
+	@include global.md {
+		 display: none !important;
+	}
+}
+.hide-under-md {
+	@include global.under_md {
+		 display: none !important;
+	}
+}
+
+.hide-over-lg {
+  @include global.lg {
+     display: none !important;
+  }
+}
+.hide-under-lg {
+  @include global.under_lg {
+     display: none !important;
+  }
+}

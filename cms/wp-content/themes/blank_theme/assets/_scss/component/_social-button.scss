@@ -1,0 +1,46 @@
+//サイト共通SCSS
+@use "../global";
+
+.c-social-buttons {
+	display: flex;
+	gap: 14px;
+	margin: 0;
+	padding: 0;
+	@include global.under_xs {
+		justify-content: center;
+	}
+}
+
+.c-social-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-white);
+	border-radius: 50%;
+	width: 42px;
+	height: 42px;
+
+	img {
+		width: 24px;
+		height: auto;
+	}
+
+	&.c-social-button--x {
+		img {
+			width: 22px;
+		}
+	}
+	&.c-social-button--facebook {
+		img {
+			width: 28px;
+		}
+	}
+}
+
+.c-social-buttons--shadow {
+	.c-social-button {
+		box-shadow: 0 3px 6px #00000029;
+	}
+}
+
+

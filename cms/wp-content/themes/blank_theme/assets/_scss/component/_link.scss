@@ -1,0 +1,13 @@
+//サイト共通SCSS
+@use "../global";
+
+a {
+	&.c-link {
+		font-size: 12px;
+		color: var(--color-text);
+		&:hover {
+			color: var(--color-hover);
+		}
+	}
+}
+

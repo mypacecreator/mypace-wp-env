@@ -1,0 +1,11 @@
+@use "../global";
+
+.error404 {
+	.content {
+		padding-bottom: 60px;
+
+		.error404__content {
+			margin-bottom: 40px;
+		}
+	}
+}

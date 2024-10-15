@@ -1,0 +1,189 @@
+@use "../global";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body {
+	color: var(--color-text);
+	font-family: var(--font-base), sans-serif;
+	font-optical-sizing: auto;
+	font-feature-settings: "palt";
+	font-size: 16px;
+	line-height: 1.625;
+}
+
+p {
+	margin-bottom: 1em;
+	line-height: 1.875;
+}
+
+a {
+	color: var(--color-text);
+	transition: color 0.5s, text-decoration 0.5s;
+	&:hover {
+		color: var(--color-hover);
+
+		img {
+			opacity: 0.65;
+		}
+	}
+
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+
+h1 {
+}
+
+h2 {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	@include global.under_sm {
+		font-size: clamp(20px, 5.2vw, 24px);
+	}
+	@include global.sm {
+		font-size: 32px;
+	}
+
+}
+
+h3 {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	@include global.under_sm {
+		font-size: 18px;
+	}
+	@include global.sm {
+		font-size: 20px;
+	}
+}
+
+h4 {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-size: 1.1rem;
+}
+
+h5,
+h6 {
+	font-size: 1rem;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.content {
+	ul,
+	ol {
+		margin-left: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	ul {
+		list-style: disc;
+		& > li {
+			&::marker {
+				color: var(--color-font);
+				font-size: 1.25em;
+			}
+		}
+	}
+
+	dl {
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+}
+
+
+
+table {
+	width: 100%;
+	margin-bottom: 4.5em;
+	th,
+	td {
+		text-align: left;
+		border: 1px solid var(--color-gray);
+		padding: 1em;
+	}
+	th {
+		background-color: var(--color-lightgray);
+		word-break: keep-all;
+	}
+	td {
+		background-color: var(--color-white);
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+small {
+	font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+
+@include global.under_sm {
+	:root {
+		--wp--preset--font-size--large: 24px;
+		--wp--preset--font-size--xlarge: 28px;
+		--wp--preset--font-size--huge: 32px;
+	}
+}

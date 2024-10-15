@@ -1,0 +1,28 @@
+//サイト共通SCSS
+@use "../global";
+
+.wp-block-gallery {
+	&.is-style-customer-logos {
+		justify-content: center;
+		margin-bottom: 40px;
+
+		& > .wp-block-image {
+			padding: 0 1rem;
+			flex-grow: 0 !important;
+			margin: auto 0 !important;
+			width: calc(100% / 3 - 16px) !important;
+			min-height: 70px;
+			@include global.xs {
+				width: calc(100% / 4 - 16px) !important;
+			}
+			@include global.sm {
+				width: calc(100% / 6 - 16px) !important;
+			}
+			@include global.md {
+				width: calc(100% / 9 - 16px) !important;
+			}
+		}
+	}
+}
+
+

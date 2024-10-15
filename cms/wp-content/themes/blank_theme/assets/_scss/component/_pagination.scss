@@ -1,0 +1,57 @@
+//サイト共通SCSS
+@use "../global";
+
+.pagination {
+	margin: 60px auto 0;
+}
+
+.nav-links {
+	text-align: center;
+	line-height: 1;
+	font-size: 17px;
+
+	& > .page-numbers {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 2px;
+		border-radius: 100%;
+		padding: 12px 16px;
+
+		&.current {
+			color: var(--color-white);
+			background: var(--color-accent);
+		}
+
+		&.dots {
+			min-width: inherit;
+			padding: 0;
+			background: none;
+			border: none;
+		}
+	}
+
+	& > a.page-numbers {
+		color: var(--color-red);
+		text-decoration: none;
+		transition: background 0.5s, color 0.5s;
+
+		&:hover {
+			color: var(--color-white);
+			background: var(--color-accent);
+		}
+	}
+
+	& img {
+		vertical-align: middle;
+	}
+
+	& .prev.page-numbers,
+	& .next.page-numbers {
+		&:hover {
+			color: var(--color-red);
+			text-decoration: underline;
+			background-color: transparent;
+		}
+
+	}
+}

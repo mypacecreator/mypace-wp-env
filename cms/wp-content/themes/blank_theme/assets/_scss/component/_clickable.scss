@@ -1,0 +1,27 @@
+//サイト共通SCSS
+@use "../global";
+
+.js-clickable {
+	.wp-block-image {
+		contain: paint;
+		img {
+			width: 100%;
+			height: auto;
+			transition: transform 0.5s ease, opacity 0.5s ease;
+		}
+	}
+
+	&:hover {
+		p,
+		.wp-block-heading {
+			text-decoration: underline;
+		}
+
+		.wp-block-image {
+			img {
+				opacity: 0.8;
+				transform: scale(1.05);
+			}
+		}
+	}
+}

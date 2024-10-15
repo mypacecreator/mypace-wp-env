@@ -1,0 +1,55 @@
+//サイト共通SCSS
+@use "../global";
+
+.c-toggle {
+	position: relative;
+	width: global.$header_height_sp;
+	height: global.$header_height_sp;
+	box-sizing: border-box;
+	border: none;
+	background-color: var(--color-white);
+	color: var(--color-text);
+	font-size: 10px;
+	font-weight: bold;
+
+	.c-toggle__icon,
+	.c-toggle__icon::before,
+	.c-toggle__icon::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 3px;
+		width: 25px;
+		background-color: var(--color-text);
+		transition: all 0.5s ease-in-out;
+	}
+	.c-toggle__icon {
+		transform: translate3d(-50%, -8px, 0);
+	}
+	.c-toggle__icon::before {
+		transform: translate3d(-50%, -10px, 0);
+	}
+	.c-toggle__icon::after {
+		transform: translate3d(-50%, 6px, 0);
+	}
+	.c-toggle__text {
+		position: relative;
+		top: 14px;
+	}
+
+	&[aria-expanded="true"] {
+		.c-toggle__icon {
+			background-color: transparent;
+		}
+		.c-toggle__icon::before {
+			transform: translateX(-50%) rotate(45deg);
+			top: 2px;
+		}
+		.c-toggle__icon::after {
+			transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+			top: 12px;
+		}
+	}
+}

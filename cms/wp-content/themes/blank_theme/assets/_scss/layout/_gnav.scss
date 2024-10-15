@@ -1,0 +1,210 @@
+@use "../global";
+
+.l-gnav {
+	@include global.under_md {
+		display: none;
+		position: absolute;
+		top: global.$header_height_sp;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		width: 100%;
+		height: calc(100svh - global.$header_height_sp);
+		background-color: var(--color-white);
+		box-shadow: 0 6px 10px -8px var(--color-gray);
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
+	}
+
+	.l-gnav__inner {
+		& > .l-gnav__list { // 親項目のみ
+			@include global.under_md {
+				border-top: 1px solid var(--color-lightgray);
+			}
+
+			@include global.md {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				column-gap: 10px;
+				height: global.$header_height_pc;
+			}
+
+			& > .l-gnav__item {
+				& > a {
+
+					@include global.md {
+						padding: 5px 20px 5px 20px;
+						&:hover {
+							color: var(--color-white);
+							background-color: var(--color-gray);
+
+							&::after {
+								border-color: var(--color-white);
+							}
+						}
+					}
+				}
+
+				&.l-gnav__item--has-child {
+					@include global.md {
+						& > a {
+							padding: 5px 28px 5px 15px;
+						}
+					}
+				}
+
+				& + .l-gnav__item {
+					&:not(.l-gnav__item--contact) {
+						@include global.under_md {
+							border-top: 1px solid var(--color-lightgray);
+						}
+					}
+				}
+
+				&.l-gnav__item--contact {
+					@include global.under_md {
+						padding: 20px;
+					}
+					a {
+						border-radius: 0;
+						@include global.under_md {
+							padding: 24px 10px;
+							font-size: clamp(20px, 6vw, 24px);
+						}
+
+						&.c-link-button {
+							&:hover {
+								color: var(--color-link);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.l-gnav__item { // 親子共通
+			list-style: none;
+			position: relative;
+
+			a {
+				display: block;
+				padding: 20px;
+				text-align: left;
+				text-decoration: none;
+				font-size: clamp(12px, 4vw, 16px);
+				font-weight: var(--font-weight-bold);
+				font-feature-settings: "palt" 0;
+				transition: color 0.5s, background-color 0.5s;
+
+				&:not(.c-link-button) {
+					border-radius: 8px;
+				}
+
+				@include global.under_sm {
+					font-size: 20px;
+				}
+				@include global.md {
+					font-size: 14px;
+				}
+			}
+
+			&.l-gnav__item--has-child {
+				a {
+					&::after {
+						content: '';
+						position: absolute;
+						right: 16px;
+						top: 26px;
+						width: 16px;
+						height: 16px;
+						border-top: 1px solid var(--color-accent);
+						border-right: 1px solid var(--color-accent);
+						transform: rotate(135deg);
+						transition: border-color 0.5s;
+						@include global.md {
+							width: 8px;
+							height: 8px;
+							border-top-width: 2px;
+							border-right-width: 2px;
+							top: 12px;
+							right: 12px;
+						}
+					}
+				}
+
+				@include global.under_md {
+					&.is-active {
+						a {
+							&::after {
+								top: 32px;
+								transform: rotate(315deg);
+							}
+						}
+					}
+				}
+
+				& > .l-gnav__child {
+					padding: 0;
+					margin: 0;
+					@include global.under_md {
+						padding-bottom: 10px;
+					}
+
+					& > .l-gnav__item {
+						text-align: left;
+						@include global.md {
+							background-color: var(--color-lightgray);
+						}
+
+						& > a {
+							font-weight: 400;
+							white-space: nowrap;
+							padding: 0 42px 8px 32px;
+							@include global.md {
+								padding: 12px 42px 12px 25px;
+							}
+
+							&::after {
+								@include global.under_md {
+									content: none;
+								}
+								@include global.md {
+									transform: rotate(45deg);
+									top: 20px;
+								}
+							}
+						}
+					}
+
+					@include global.md {
+						position: absolute;
+						z-index: 2;
+						opacity: 0;
+						visibility: hidden;
+						padding-top: 5px;
+						transition: opacity 0.5s;
+					}
+
+					@include global.under_md {
+						display: none;
+					}
+				}
+
+				&:hover,
+				&:active {
+					& > .l-gnav__child {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.admin-bar {
+	.l-gnav {
+		top: global.$header_height_sp;
+	}
+}

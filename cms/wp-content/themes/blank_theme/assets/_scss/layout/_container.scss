@@ -1,0 +1,17 @@
+@use "../global";
+
+.container {
+	max-width: global.$max_container_width;
+	box-sizing: content-box;
+	margin-inline: auto;
+	padding-right: global.$container_side_padding_sp;
+	padding-left: global.$container_side_padding_sp;
+	@include global.sm {
+		padding-right: global.$container_side_padding_pc;
+		padding-left: global.$container_side_padding_pc;
+	}
+}
+
+.container--narrow {
+	max-width: global.$content_width_narrow;
+}

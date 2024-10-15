@@ -1,0 +1,21 @@
+@use "../global";
+
+.l-breadcrumb {
+	margin-top: 10px;
+	margin-bottom: 60px;
+
+	.l-breadcrumb__list {
+		display: flex;
+		margin-left: 0;
+	}
+
+	.l-breadcrumb__item {
+		list-style: none;
+		+ .l-breadcrumb__item {
+			&::before {
+				margin: 0 0.5em;
+				content: ">";
+			}
+		}
+	}
+}

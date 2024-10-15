@@ -1,0 +1,47 @@
+//サイト共通SCSS
+@use "../global";
+
+.is-style-button-coming-soon {
+	font-size: 12px;
+	color: #848484;
+	border: 2px solid #BEBEBE;
+	background-color: var(--color-white);
+	padding: 8px 16px 8px 24px;
+	border-radius: 8px;
+	box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	@include global.under_md {
+		flex-basis: 100%;
+		text-align: center;
+	}
+	@include global.sm {
+		font-size: 15px;
+	}
+
+	mark {
+		text-align: center;
+		flex-grow: 1;
+
+		@media (min-width: 480px) and (max-width: 1023px) {
+			padding-left: 86px;
+		}
+	}
+
+	&::after {
+		content: 'coming soon';
+		display: inline-block;
+		vertical-align: text-top;
+		font-size: 9px;
+		color: var(--color-text);
+		background-color: #BEBEBE;
+		border-radius: 30px;
+		padding: 4px 16px;
+		margin-left: 2em;
+		white-space: nowrap;
+	}
+}
+
