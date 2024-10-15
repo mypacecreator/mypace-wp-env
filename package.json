@@ -13,7 +13,8 @@
     "build:css": "run-s sass postcss:dev rimraf:css",
     "build:cssmin": "run-s sass postcss:minify rimraf:css",
     "min:js": "uglifyjs ./cms/wp-content/themes/blank_theme/src/js/main.js -c -o ./cms/wp-content/themes/blank_theme/assets/js/main.min.js",
-    "watch": "nodemon -e scss --watch ./cms/wp-content/themes/blank_theme/assets/_scss -x \"npm run build:css\""
+    "watch": "run-p watch:css bs",
+    "watch:css": "nodemon -e scss --watch ./cms/wp-content/themes/blank_theme/assets/_scss -x \"npm run build:css\""
   },
   "author": "Kei Nomura",
   "volta": {
