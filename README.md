@@ -11,7 +11,9 @@
 
 ```
 $ npm i -D // wp-env, wp-scripts をインストール
-$ npm run env start // @wordpress/env 仮想環境の立ち上げ
+$ npm run env:init // 初回起動用コマンド。立ち上げ後、同梱のデフォルトテーマを削除し、自前テーマを有効化する
+
+$ npm run env start // @wordpress/env 仮想環境の立ち上げ（通常）
 $ open "http://localhost:4444/wp-admin"
 $ npm run env stop // @wordpress/env 仮想環境の停止
 ```

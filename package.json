@@ -5,6 +5,7 @@
   "scripts": {
     "env": "wp-env",
     "wp": "wp-env run cli wp",
+    "env:init": "wp-env start && wp-env run cli wp theme activate blank_theme && wp-env run cli wp theme delete --all",
     "bs": "browser-sync start --config bs-config.js",
     "sass": "sass --no-source-map ./cms/wp-content/themes/blank_theme/_src/scss/:./cms/wp-content/themes/blank_theme/_src/scss/",
     "postcss:minify": "npx postcss ./cms/wp-content/themes/blank_theme/_src/scss/*.css --use autoprefixer postcss-minify -d ./cms/wp-content/themes/blank_theme/_src/scss/ --no-map",
