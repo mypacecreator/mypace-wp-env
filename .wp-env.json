@@ -1,9 +1,8 @@
 {
-  "core": null,
+  "core": "https://ja.wordpress.org/latest-ja.zip",
   "phpVersion": "8.2",
   "plugins": [
     "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip",
-    "https://downloads.wordpress.org/plugin/breadcrumb-navxt.zip",
     "https://downloads.wordpress.org/plugin/custom-post-type-permalinks.zip",
     "https://downloads.wordpress.org/plugin/disable-comments.zip",
     "https://downloads.wordpress.org/plugin/disable-author-archives.zip",
